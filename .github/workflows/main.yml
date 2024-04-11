@@ -14,7 +14,7 @@ jobs:
       - name: Checkout loconotion
         uses: actions/checkout@v3
         with:
-          repository: leoncvlt/loconotion
+          repository: nepslor/loconotion_local
           path: loconotion
       - name: Checkout this repo
         uses: actions/checkout@v3
@@ -25,9 +25,6 @@ jobs:
         run: docker-compose build loconotion
         working-directory: loconotion
         
-      - name: Download and install chromedriver
-        run: sudo apt install chromium-chromedriver        
-
       - name: Run Loconotion
         run: |
           docker run \
