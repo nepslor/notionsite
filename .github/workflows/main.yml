@@ -14,7 +14,7 @@ jobs:
       - name: Checkout loconotion
         uses: actions/checkout@v3
         with:
-          repository: nepslor/loconotion_local
+          repository: choux130/loconotion
           path: loconotion
       - name: Checkout this repo
         uses: actions/checkout@v3
