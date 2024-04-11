@@ -20,12 +20,14 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: pages_repo
-      - name: Download and install chromedriver
-        run: sudo apt install chromium-chromedriver
+
       - name: Build Loconotion docker image
         run: docker-compose build loconotion
         working-directory: loconotion
         
+      - name: Download and install chromedriver
+        run: sudo apt install chromium-chromedriver        
+
       - name: Run Loconotion
         run: |
           docker run \
